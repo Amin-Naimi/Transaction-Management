@@ -6,7 +6,7 @@ Une transaction est un ensemble d'opérations qui doivent être exécutées comm
 ## Atomicité:
     -Les opérations d'une transaction sont indivisibles. Si une opération échoue, la transaction entière est annulée.
 ## Cohérence:
-    -La transaction maintient la cohérence des données.
+    -La transaction maintient la cohérence des données.En respectant les contraintes d'intégrité
 ## Isolation:
     -Les transactions sont isolées les unes des autres. Les modifications apportées par une transaction ne sont pas visibles par les autres transactions tant que la première n'est pas terminée.
 ## Durabilité:
@@ -43,4 +43,4 @@ Il existe deux manières principales de gérer les transactions en Java:
 
 
 ## @Transactional:
-Lorsqu'une méthode annotée avec @Transactional est appelée, Spring va automatiquement gérer le début, la fin et la validation (commit ou rollback) de la transaction. <b>Si une exception est levée au cours de l'exécution de la méthode, Spring annulera la transaction (rollback) pour garantir la cohérence des données</b>.
+    Lorsqu'une méthode annotée avec @Transactional est appelée, Spring va automatiquement gérer le début, la fin et la validation (commit ou rollback) de la             transaction. <b>Si une exception est levée au cours de l'exécution de la méthode, Spring annulera la transaction (rollback) pour garantir la cohérence des          données</b>.
